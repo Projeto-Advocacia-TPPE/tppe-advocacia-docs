@@ -1,9 +1,8 @@
-# Requisitos Elicitados
+## Requisitos Elicitados
 
 A partir de entrevista realizada com o cliente, foram elicitados os requisitos do sistema, classificados em funcionais e não funcionais. Os requisitos funcionais abrangem controle de clientes, processos, prazos, documentos, compromissos, dados financeiros, presença online e integração com fontes externas de dados processuais. Os requisitos não funcionais estabelecem critérios de qualidade relacionados a performance, segurança, disponibilidade, conformidade com a LGPD, entre outros.
 
 ## Requisitos Funcionais
-
 
 | ID | Categoria | Descrição |
 |---|---|---|
@@ -44,6 +43,11 @@ A partir de entrevista realizada com o cliente, foram elicitados os requisitos d
 | #RF35 | Backup, LGPD e Compliance | Política de retenção de dados com exclusão automática após período definido. |
 | #RF36 | Backup, LGPD e Compliance | Anonimização dos dados de ex-clientes após encerramento da relação. |
 | #RF37 | Backup, LGPD e Compliance | Termo de consentimento no formulário da landing page com registro de aceite. |
+| #RF38 | Workflow e Tarefas | Criação de tarefas com título, descrição, prazo, prioridade (baixa, média, alta, urgente) e atribuição de responsável. |
+| #RF39 | Workflow e Tarefas | Vínculo da tarefa a um processo, cliente ou avulsa. |
+| #RF40 | Workflow e Tarefas | Quadro Kanban com colunas configuráveis (a fazer, em andamento, concluída). |
+| #RF41 | Workflow e Tarefas | Checklist de subtarefas dentro de uma tarefa. |
+| #RF42 | Workflow e Tarefas | Sugestão automática de criação de tarefa ao alterar o status de um processo. |
 
 ---
 
