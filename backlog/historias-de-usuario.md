@@ -45,7 +45,7 @@ As histórias de usuário foram elaboradas a partir das necessidades identificad
 
 ---
 
-### Épico 4: Core Jurídico
+### Épico 4: Jurídico
 
 | Como | Quero | Para que |
 |---|---|---|
