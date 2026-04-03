@@ -14,11 +14,11 @@
 | ID | História |
 |---|---|
 | US-05 | Como Administrador, quero cadastrar e editar as informações institucionais do escritório, para que esses dados sejam exibidos corretamente no site e em documentos gerados pelo sistema. |
-<!-- | ~~US-06~~ | ~~Como visitante do site, quero acessar uma página institucional do advogado com informações claras sobre quem é, o que faz e como entrar em contato, para que eu avalie se o escritório atende às minhas necessidades e consiga iniciar contato facilmente.~~ | -->
 | US-07 | Como visitante do site, quero acessar uma seção de artigos publicados pelo advogado, para que eu me informe sobre temas jurídicos relevantes e perceba a autoridade técnica do profissional. |
 | US-08 | Como Administrador, quero editar os textos e imagens das seções da landing page (hero, sobre, diferenciais) diretamente pelo painel administrativo, para que o conteúdo institucional seja atualizado sem necessidade de alteração em código. |
 | US-09 | Como Administrador, quero criar e editar artigos com título, conteúdo, imagem de capa (se possuir) e categoria, e definir se o artigo é rascunho ou publicado, para que eu produza conteúdo jurídico de qualidade com controle sobre quando ele se torna visível ao público. |
 | US-10 | Como Administrador, quero visualizar um preview do artigo exatamente como ele aparecerá para o visitante no blog, antes de publicá-lo, para que eu revise formatação, imagens e leitura geral sem expor o conteúdo ao público. |
+<!-- | ~~US-06~~ | ~~Como visitante do site, quero acessar uma página institucional do advogado com informações claras sobre quem é, o que faz e como entrar em contato, para que eu avalie se o escritório atende às minhas necessidades e consiga iniciar contato facilmente.~~ | -->
 
 ## Épico 3: Gestão de leads e clientes
 
