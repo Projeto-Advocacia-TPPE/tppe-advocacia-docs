@@ -6,14 +6,21 @@ Esta é a documentação técnica do projeto de advocacia desenvolvido na discip
 
 O sistema foi desenvolvido com o objetivo de gerenciar processos, clientes e documentos de um escritório de advocacia.
 
+Nesta etapa, o workspace já possui uma base separada de:
+
+- `backend/` com FastAPI, Postgres e estrutura MVC
+- `frontend/` com React e Vite
+- `docs/` com as páginas da documentação técnica
+
 ## Como navegar
 
 Utilize o menu de navegação no topo para acessar as seções da documentação:
 
 - **Inicio** — Esta página de apresentação
-- **Exemplo** — Páginas de exemplo e referência
+- **Backlog** — Requisitos funcionais e não funcionais
+- **Arquitetura** — Estrutura inicial dos repositórios
 
 ## Links úteis
 
-- [Repositório do código](https://github.com/seu-usuario/seu-repositorio)
-- [Abrir uma issue](https://github.com/seu-usuario/seu-repositorio/issues)
+- [Repositório do código](https://github.com/Projeto-Advocacia-TPPE/docs)
+- [Abrir uma issue](https://github.com/Projeto-Advocacia-TPPE/docs/issues)
