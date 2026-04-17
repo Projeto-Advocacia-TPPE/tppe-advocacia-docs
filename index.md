@@ -22,5 +22,5 @@ Utilize o menu de navegação no topo para acessar as seções da documentação
 
 ## Links úteis
 
-- [Repositório do código](https://github.com/Projeto-Advocacia-TPPE/docs)
-- [Abrir uma issue](https://github.com/Projeto-Advocacia-TPPE/docs/issues)
+- [Repositório do código](https://github.com/Projeto-Advocacia-TPPE/tppe-advocacia)
+- [Abrir uma issue](https://github.com/Projeto-Advocacia-TPPE/tppe-advocacia/issues)
