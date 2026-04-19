@@ -1,15 +1,16 @@
 # Estrutura Inicial dos Repositórios
 
-Esta entrega organiza o projeto em duas frentes principais:
+Esta entrega organiza o projeto em três repositórios independentes dentro da mesma organização no Git:
 
-- `backend/`: API em FastAPI com estrutura MVC e Postgres no mesmo repositório
-- `frontend/`: aplicação React com Vite para consumir a API
+- `tppe-advocacia-backend`: API em FastAPI com estrutura MVC e Postgres
+- `tppe-advocacia-frontend`: aplicação React com Vite para consumir a API
+- `tppe-advocacia-docs`: documentação técnica em MkDocs
 
 ## Visão Geral
 
 ```text
-.
-├── backend/
+Projeto-Advocacia-TPPE/
+├── tppe-advocacia-backend/
 │   ├── app/
 │   │   ├── controllers/
 │   │   ├── core/
@@ -20,15 +21,17 @@ Esta entrega organiza o projeto em duas frentes principais:
 │   ├── docker-compose.yml
 │   ├── Dockerfile
 │   └── requirements.txt
-├── frontend/
+├── tppe-advocacia-frontend/
 │   ├── src/
 │   │   ├── components/
 │   │   └── services/
 │   ├── index.html
 │   ├── package.json
 │   └── vite.config.js
-├── docs/
-└── mkdocs.yml
+└── tppe-advocacia-docs/
+    ├── docs/
+    ├── mkdocs.yml
+    └── requirements.txt
 ```
 
 ## Backend
@@ -76,21 +79,15 @@ O frontend usa a variável `VITE_API_URL` para apontar para a API. Por padrão, 
 VITE_API_URL=http://localhost:8000/api/v1
 ```
 
-## Como Executar
+## Documentação
 
-### Backend
+### Stack
 
-```bash
-cd backend
-cp .env.example .env
-docker compose up --build
-```
+- MkDocs
+- Material for MkDocs
 
-### Frontend
+### Organização inicial
 
-```bash
-cd frontend
-cp .env.example .env
-npm install
-npm run dev
-```
+- `docs/`: páginas da documentação
+- `mkdocs.yml`: configuração do site
+- `.github/workflows/deploy.yml`: publicação automática no GitHub Pages

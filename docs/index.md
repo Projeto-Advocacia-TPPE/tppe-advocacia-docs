@@ -6,11 +6,11 @@ Esta é a documentação do projeto de advocacia desenvolvido na disciplina TPPE
 
 O sistema foi desenvolvido com o objetivo de gerenciar processos, clientes e agenda de um escritório de advocacia.
 
-Nesta etapa, o workspace já possui uma base separada de:
+Nesta etapa, o projeto está organizado em três repositórios na organização do Git:
 
-- `backend/` com FastAPI, Postgres e estrutura MVC
-- `frontend/` com React e Vite
-- `docs/` com as páginas da documentação técnica
+- `tppe-advocacia-backend` com FastAPI, Postgres e estrutura MVC
+- `tppe-advocacia-frontend` com React e Vite
+- `tppe-advocacia-docs` com as páginas da documentação técnica em MkDocs
 
 ## Como navegar
 
@@ -22,5 +22,5 @@ Utilize o menu de navegação no topo para acessar as seções da documentação
 
 ## Links úteis
 
-- [Repositório do código](https://github.com/Projeto-Advocacia-TPPE/tppe-advocacia)
-- [Abrir uma issue](https://github.com/Projeto-Advocacia-TPPE/tppe-advocacia/issues)
+- [Organização no GitHub](https://github.com/Projeto-Advocacia-TPPE)
+- [Repositório da documentação](https://github.com/Projeto-Advocacia-TPPE/tppe-advocacia-docs)
