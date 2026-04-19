@@ -58,6 +58,21 @@ Projeto-Advocacia-TPPE/
 - `GET /api/v1/leads`
 - `POST /api/v1/leads`
 
+### Execucao local
+
+Para rodar o backend em uma maquina limpa:
+
+```bash
+cp .env.example .env
+docker compose up -d db
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+Se as portas `8000` ou `5432` ja estiverem em uso, ajuste `API_HOST_PORT` e `POSTGRES_PORT` no `.env`.
+
 ## Frontend
 
 ### Stack
