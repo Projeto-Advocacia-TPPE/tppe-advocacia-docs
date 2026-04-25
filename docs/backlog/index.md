@@ -14,10 +14,10 @@
 | ID | História |
 |---|---|
 | US-05 | Como Administrador, quero cadastrar e editar as informações institucionais do escritório, para que esses dados sejam exibidos corretamente no site e em documentos gerados pelo sistema. |
-| US-07 | Como visitante do site, quero acessar uma seção de artigos publicados pelo advogado, para que eu me informe sobre temas jurídicos relevantes e perceba a autoridade técnica do profissional. |
-| US-08 | Como Administrador, quero editar os textos e imagens das seções da landing page (hero, sobre, diferenciais) diretamente pelo painel administrativo, para que o conteúdo institucional seja atualizado sem necessidade de alteração em código. |
-| US-09 | Como Administrador, quero criar e editar artigos com título, conteúdo, imagem de capa (se possuir) e categoria, e definir se o artigo é rascunho ou publicado, para que eu produza conteúdo jurídico de qualidade com controle sobre quando ele se torna visível ao público. |
-| US-10 | Como Administrador, quero visualizar um preview do artigo exatamente como ele aparecerá para o visitante no blog, antes de publicá-lo, para que eu revise formatação, imagens e leitura geral sem expor o conteúdo ao público. |
+| US-07 | Como Administrador, quero editar os textos e imagens das seções da landing page (hero, sobre, diferenciais) diretamente pelo painel administrativo, para que o conteúdo institucional seja atualizado sem necessidade de alteração em código. |
+| US-08 | Como visitante do site, quero acessar uma seção de artigos publicados pelo advogado, para que eu me informe sobre temas jurídicos relevantes e perceba a autoridade técnica do profissional. |
+| US-09 | Como Advogado associado, quero criar e editar artigos com título, conteúdo, imagem de capa (se possuir) e categoria, e definir se o artigo é rascunho ou publicado, para que eu produza conteúdo jurídico de qualidade com controle sobre quando ele se torna visível ao público. |
+| US-10 | Como Advogado associado, quero visualizar um preview do artigo exatamente como ele aparecerá para o visitante no blog, antes de publicá-lo, para que eu revise formatação, imagens e leitura geral sem expor o conteúdo ao público. |
 <!-- | ~~US-06~~ | ~~Como visitante do site, quero acessar uma página institucional do advogado com informações claras sobre quem é, o que faz e como entrar em contato, para que eu avalie se o escritório atende às minhas necessidades e consiga iniciar contato facilmente.~~ | -->
 
 ## Épico 3: Gestão de leads e clientes
@@ -39,7 +39,6 @@
 | US-21 | Como Advogado associado, quero registrar manualmente movimentações no processo e visualizá-las como uma linha do tempo cronológica, para que eu tenha um histórico completo e legível da evolução processual em um só lugar. |
 | US-22 | Como Advogado associado, quero alterar o status de um processo entre ativo, suspenso, arquivado e encerrado, para que a situação atual de cada processo esteja sempre refletida no sistema e facilite a organização do trabalho. |
 | US-23 | Como Advogado associado, quero registrar anotações internas vinculadas a um processo, para que eu mantenha observações, estratégias e lembretes pessoais organizados dentro do contexto do caso, sem que se misturem com as movimentações formais. |
-<!-- | US-24 | Como Administrador ou Advogado, quero listar todos os processos do escritório e filtrá-los por diversos critérios, para que eu encontre rapidamente o processo que preciso sem percorrer a base manualmente. | -->
 
 ## Épico 5: APIs externas
 
@@ -60,7 +59,6 @@
 
 | ID | História |
 |---|---|
-| US-32 | Como Administrador, quero exportar todos os dados pessoais de um cliente em formato estruturado e legível, para que o escritório atenda ao direito de portabilidade previsto na LGPD quando solicitado pelo titular. |
 | US-33 | Como Administrador, quero excluir os dados pessoais de um ex-cliente após o encerramento da relação com o escritório, para que o escritório cumpra o princípio de minimização da LGPD, mantendo apenas o necessário para obrigações legais. |
 | US-34 | Como visitante do site, quero visualizar o termo de consentimento de uso dos meus dados antes de enviar o formulário de contato, para que eu saiba como meus dados serão tratados e possa autorizar o uso de forma consciente. |
 
@@ -69,7 +67,6 @@
 | ID | História |
 |---|---|
 | US-35 | Como Advogado associado, quero cadastrar compromissos na agenda informando tipo, data, hora, duração e vínculo opcional com cliente ou processo, para que todos os eventos do escritório fiquem registrados em um só lugar com o contexto necessário para cada atendimento. |
-| US-36 | Como Advogado associado, quero visualizar a agenda do escritório nas visões de dia, semana e mês, para que eu tenha clareza sobre a distribuição dos compromissos e consiga identificar rapidamente horários livres e ocupados. |
 | US-37 | Como Advogado associado, quero informar a data de início, o tipo de prazo e a comarca de um processo e visualizar imediatamente a data-limite calculada em dias úteis com os feriados forenses considerados, para que eu tenha segurança na contagem de prazo sem risco de erro de cálculo manual. |
 | US-38 | Como Advogado associado, quero receber alertas automáticos quando um prazo processual estiver se aproximando do vencimento, em intervalos escalonados, para que eu tenha tempo suficiente para preparar a peça ou tomar a providência necessária sem risco de perda de prazo. |
 
