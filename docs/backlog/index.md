@@ -45,34 +45,33 @@
 | ID | História |
 |---|---|
 | US-20 | Como Advogado associado, quero visualizar as movimentações processuais atualizadas diretamente na linha do tempo de cada processo, sem precisar acessar portais dos tribunais manualmente, para que eu acompanhe a evolução dos casos de forma centralizada e eficiente. |
-| US-21 | Como Advogado associado, quero consultar os dados de uma pessoa jurídica pela API da Receita Federal ao informar o CNPJ, para que os campos de cadastro (razão social, endereço, situação cadastral) sejam preenchidos automaticamente, reduzindo digitação e erros. |
-| US-22 | Como Administrador, quero ser notificado de chamadas realizadas pelo sistema a APIs externas, com status de falha, para que eu possa monitorar a saúde das integrações e identificar problemas rapidamente. |
+| US-21 | Como Administrador, quero ser notificado de chamadas realizadas pelo sistema a APIs externas, com status de falha, para que eu possa monitorar a saúde das integrações e identificar problemas rapidamente. |
 
 ## Épico 6: Notificações
 
 | ID | História |
 |---|---|
-| US-23 | Como Advogado associado, quero receber notificações por e-mail para os eventos que considero importantes, para que eu seja informado mesmo quando não estiver logado no painel. |
-| US-24 | Como Advogado associado, quero ser notificado quando ocorrerem eventos em processos em que estou vinculado, para que eu tome as providências necessárias sem depender de comunicação manual entre a equipe. |
+| US-22 | Como Advogado associado, quero receber notificações por e-mail para os eventos que considero importantes, para que eu seja informado mesmo quando não estiver logado no painel. |
+| US-23 | Como Advogado associado, quero ser notificado quando ocorrerem eventos em processos em que estou vinculado, para que eu tome as providências necessárias sem depender de comunicação manual entre a equipe. |
 
 ## Épico 7: Backup, LGPD e Compliance
 
 | ID | História |
 |---|---|
-| US-25 | Como Administrador, quero excluir os dados pessoais de um ex-cliente após o encerramento da relação com o escritório, para que o escritório cumpra o princípio de minimização da LGPD, mantendo apenas o necessário para obrigações legais. |
-| US-26 | Como visitante do site, quero visualizar o termo de consentimento de uso dos meus dados antes de enviar o formulário de contato, para que eu saiba como meus dados serão tratados e possa autorizar o uso de forma consciente. |
+| US-24 | Como Administrador, quero excluir os dados pessoais de um ex-cliente após o encerramento da relação com o escritório, para que o escritório cumpra o princípio de minimização da LGPD, mantendo apenas o necessário para obrigações legais. |
+| US-25 | Como visitante do site, quero visualizar o termo de consentimento de uso dos meus dados antes de enviar o formulário de contato, para que eu saiba como meus dados serão tratados e possa autorizar o uso de forma consciente. |
 
 ## Épico 8: Agenda e Prazos
 
 | ID | História |
 |---|---|
-| US-27 | Como Advogado associado, quero cadastrar compromissos na agenda informando tipo, data, hora, duração e vínculo opcional com cliente ou processo, para que todos os eventos do escritório fiquem registrados em um só lugar com o contexto necessário para cada atendimento. |
-| US-28 | Como Advogado associado, quero informar a data de início, o tipo de prazo e a comarca de um processo e visualizar imediatamente a data-limite calculada em dias úteis com os feriados forenses considerados, para que eu tenha segurança na contagem de prazo sem risco de erro de cálculo manual. |
-| US-29 | Como Advogado associado, quero receber alertas automáticos quando um prazo processual estiver se aproximando do vencimento, em intervalos escalonados, para que eu tenha tempo suficiente para preparar a peça ou tomar a providência necessária sem risco de perda de prazo. |
+| US-26 | Como Advogado associado, quero cadastrar compromissos na agenda informando tipo, data, hora, duração e vínculo opcional com cliente ou processo, para que todos os eventos do escritório fiquem registrados em um só lugar com o contexto necessário para cada atendimento. |
+| US-27 | Como Advogado associado, quero informar a data de início, o tipo de prazo e a comarca de um processo e visualizar imediatamente a data-limite calculada em dias úteis com os feriados forenses considerados, para que eu tenha segurança na contagem de prazo sem risco de erro de cálculo manual. |
+| US-28 | Como Advogado associado, quero receber alertas automáticos quando um prazo processual estiver se aproximando do vencimento, em intervalos escalonados, para que eu tenha tempo suficiente para preparar a peça ou tomar a providência necessária sem risco de perda de prazo. |
 
 ## Épico 9: Workflow e Tarefas
 
 | ID | História |
 |---|---|
-| US-30 | Como Administrador, quero criar tarefas com título, descrição, prazo, prioridade e responsável, podendo vinculá-las a um processo, cliente ou mantê-las avulsas, para que o escritório organize e distribua o trabalho operacional de forma clara, com contexto e responsabilidade definidos. |
-| US-31 | Como Advogado associado, quero visualizar e gerenciar as tarefas em um quadro Kanban com colunas representando os estágios do fluxo de trabalho, para que eu tenha visão clara do andamento de todas as tarefas e possa atualizar o status com um simples arrastar. |
+| US-29 | Como Administrador, quero criar tarefas com título, descrição, prazo, prioridade e responsável, podendo vinculá-las a um processo, cliente ou mantê-las avulsas, para que o escritório organize e distribua o trabalho operacional de forma clara, com contexto e responsabilidade definidos. |
+| US-30 | Como Advogado associado, quero visualizar e gerenciar as tarefas em um quadro Kanban com colunas representando os estágios do fluxo de trabalho, para que eu tenha visão clara do andamento de todas as tarefas e possa atualizar o status com um simples arrastar. |
