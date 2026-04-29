@@ -58,6 +58,6 @@ nav:
   - Inicio: index.md
   - Backlog:
     - Visão Geral: backlog/index.md
-    - Requisitos: backlog/requisitos.md
+    #- Requisitos: backlog/requisitos.md
   - Arquitetura:
     - Estrutura Inicial: arquitetura/estrutura-inicial.md
