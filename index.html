@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bem-vindo-a-documentacao" class="md-skip">
+        <a href="#documentacao-tecnica" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -410,6 +410,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#estado-atual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado Atual
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#como-navegar" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -521,6 +532,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="backlog/status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status da Implementação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="backlog/requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -596,7 +663,35 @@
   <span class="md-ellipsis">
     
   
-    Estrutura Inicial
+    Estrutura Atual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="arquitetura/modelo-fisico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo Físico do Banco
   
 
     
@@ -655,6 +750,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#estado-atual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado Atual
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#como-navegar" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -696,22 +802,26 @@
   
 
 
-<h1 id="bem-vindo-a-documentacao">Bem-vindo à Documentação<a class="headerlink" href="#bem-vindo-a-documentacao" title="Permanent link">&para;</a></h1>
+<h1 id="documentacao-tecnica">Documentação Técnica<a class="headerlink" href="#documentacao-tecnica" title="Permanent link">&para;</a></h1>
 <p>Esta é a documentação do projeto de advocacia desenvolvido na disciplina TPPE.</p>
 <h2 id="sobre-o-projeto">Sobre o Projeto<a class="headerlink" href="#sobre-o-projeto" title="Permanent link">&para;</a></h2>
-<p>O sistema foi desenvolvido com o objetivo de gerenciar processos, clientes e agenda de um escritório de advocacia.</p>
+<p>O sistema foi desenvolvido com o objetivo de apoiar a gestão de um escritório de advocacia, cobrindo presença online, recepção de leads, cadastro de clientes, controle de processos, movimentações, anotações internas e trilhas de auditoria.</p>
 <p>Nesta etapa, o projeto está organizado em três repositórios na organização do Git:</p>
 <ul>
-<li><code>tppe-advocacia-backend</code> com FastAPI, Postgres e estrutura MVC</li>
-<li><code>tppe-advocacia-frontend</code> com React e Vite</li>
+<li><code>tppe-advocacia-backend</code> com FastAPI, PostgreSQL, SQLAlchemy e monólito modular</li>
+<li><code>tppe-advocacia-frontend</code> com React e Vite para a interface inicial de integração</li>
 <li><code>tppe-advocacia-docs</code> com as páginas da documentação técnica em MkDocs</li>
 </ul>
+<h2 id="estado-atual">Estado Atual<a class="headerlink" href="#estado-atual" title="Permanent link">&para;</a></h2>
+<p>A implementação mais avançada está no backend. A branch <code>main</code> do backend contém módulos de autenticação, usuários, auditoria, configuração institucional, mídia, artigos, leads, clientes, processos, movimentações e anotações.</p>
+<p>O frontend ainda está em estágio inicial, com health check e envio público de leads. As telas administrativas previstas no backlog ainda não foram implementadas.</p>
 <h2 id="como-navegar">Como navegar<a class="headerlink" href="#como-navegar" title="Permanent link">&para;</a></h2>
 <p>Utilize o menu de navegação no topo para acessar as seções da documentação:</p>
 <ul>
 <li><strong>Inicio</strong> — Esta página de apresentação</li>
-<li><a href="backlog/"><strong>Backlog</strong></a> — Lista de funcionalidades planejadas e em desenvolvimento</li>
-<li><strong>Arquitetura</strong> — Estrutura inicial dos repositórios</li>
+<li><a href="backlog/"><strong>Backlog</strong></a> — Histórias de usuário planejadas</li>
+<li><a href="backlog/status/"><strong>Status da Implementação</strong></a> — O que está feito, parcial ou pendente</li>
+<li><strong>Arquitetura</strong> — Estrutura atual do backend e modelo físico do banco</li>
 </ul>
 <h2 id="links-uteis">Links úteis<a class="headerlink" href="#links-uteis" title="Permanent link">&para;</a></h2>
 <ul>
