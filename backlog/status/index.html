@@ -887,7 +887,7 @@
 <tr>
 <td>APIs Externas</td>
 <td>Parcial</td>
-<td>Há sincronização manual com a API pública DataJud, retentativa para falhas temporárias e log persistido de chamadas externas; ainda faltam consulta periódica e notificações</td>
+<td>Há sincronização individual e em lote com a API pública DataJud, retentativa para falhas temporárias e log persistido de chamadas externas; ainda faltam agendamento periódico e notificações</td>
 </tr>
 <tr>
 <td>Notificações</td>
@@ -1039,8 +1039,8 @@
 <tr>
 <td>US-20</td>
 <td>Parcial</td>
-<td><code>POST /api/v1/processes/{process_id}/datajud/sync-movements</code> consulta DataJud por número CNJ e insere novas movimentações como <code>EXTERNAL</code></td>
-<td>Automatizar consulta periódica dos processos ativos</td>
+<td><code>POST /api/v1/processes/{process_id}/datajud/sync-movements</code> sincroniza um processo e <code>POST /api/v1/datajud/sync-active-processes</code> sincroniza processos ativos em lote</td>
+<td>Agendar execução periódica automática</td>
 </tr>
 <tr>
 <td>US-21</td>
@@ -1108,13 +1108,13 @@
 <ol>
 <li>O backend já possui migration inicial com Alembic, mas ainda mantém <code>Base.metadata.create_all</code> no startup para facilitar ambientes locais/testes.</li>
 <li>O modelo físico está documentado e versionado em migration inicial; falta incorporar uma rotina de execução de migrations ao processo de deploy.</li>
-<li>A integração externa jurídica existe via DataJud e possui retentativa para falhas temporárias, mas ainda é acionada manualmente.</li>
+<li>A integração externa jurídica existe via DataJud e possui retentativa para falhas temporárias; a sincronização em lote existe, mas ainda depende de acionamento manual.</li>
 <li>O frontend não acompanha a amplitude do backend; a maior parte das funcionalidades está disponível apenas via API.</li>
 <li>RBAC precisa ser refinado para os papéis reais do backlog.</li>
 </ol>
 <h2 id="proximos-passos-sugeridos">Próximos Passos Sugeridos<a class="headerlink" href="#proximos-passos-sugeridos" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Automatizar a consulta periódica DataJud para processos ativos.</li>
+<li>Transformar a sincronização em lote DataJud em execução periódica agendada.</li>
 <li>Definir o fluxo de deploy para executar <code>alembic upgrade head</code>.</li>
 <li>Criar telas administrativas mínimas para usuários, leads, clientes e processos.</li>
 <li>Expandir auditoria para clientes, processos, artigos e configurações.</li>
