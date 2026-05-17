@@ -886,8 +886,8 @@
 </tr>
 <tr>
 <td>APIs Externas</td>
-<td>Pendente</td>
-<td>Não há consumo de Jusbrasil/CNJ/Receita; a integração externa atual é o Resend para e-mail</td>
+<td>Parcial</td>
+<td>Há sincronização manual com a API pública DataJud e log persistido de chamadas externas; ainda faltam consulta periódica, retentativa automática e notificações</td>
 </tr>
 <tr>
 <td>Notificações</td>
@@ -1021,8 +1021,8 @@
 <tr>
 <td>US-17</td>
 <td>Feito</td>
-<td>Movimentações manuais e timeline por processo</td>
-<td>Integração com movimentações externas</td>
+<td>Movimentações manuais, movimentações externas DataJud e timeline por processo</td>
+<td>Melhorar tela de uso</td>
 </tr>
 <tr>
 <td>US-18</td>
@@ -1038,15 +1038,15 @@
 </tr>
 <tr>
 <td>US-20</td>
-<td>Pendente</td>
-<td>Não identificado</td>
-<td>Consumir API processual externa e inserir movimentações automaticamente</td>
+<td>Parcial</td>
+<td><code>POST /api/v1/processes/{process_id}/datajud/sync-movements</code> consulta DataJud por número CNJ e insere novas movimentações como <code>EXTERNAL</code></td>
+<td>Automatizar consulta periódica dos processos ativos</td>
 </tr>
 <tr>
 <td>US-21</td>
-<td>Pendente</td>
-<td>Não identificado</td>
-<td>Registrar chamadas externas, falhas, retentativas e notificação ao administrador</td>
+<td>Parcial</td>
+<td>Tabela <code>external_api_logs</code> e <code>GET /api/v1/external-api-logs</code> registram sucesso/falha das chamadas DataJud</td>
+<td>Retentativa automática e notificação ao administrador</td>
 </tr>
 <tr>
 <td>US-22</td>
@@ -1108,13 +1108,13 @@
 <ol>
 <li>O backend ainda cria o banco com <code>Base.metadata.create_all</code>; não há Alembic/migrations.</li>
 <li>O modelo físico passou a estar documentado nesta documentação, mas ainda não há script SQL versionado.</li>
-<li>A integração externa de domínio jurídico ainda não existe. Para a entrega, Resend cobre integração externa genérica, mas não cobre Jusbrasil/CNJ.</li>
+<li>A integração externa jurídica existe via DataJud, mas ainda é acionada manualmente e não possui retentativa automática.</li>
 <li>O frontend não acompanha a amplitude do backend; a maior parte das funcionalidades está disponível apenas via API.</li>
 <li>RBAC precisa ser refinado para os papéis reais do backlog.</li>
 </ol>
 <h2 id="proximos-passos-sugeridos">Próximos Passos Sugeridos<a class="headerlink" href="#proximos-passos-sugeridos" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Implementar uma integração externa de domínio: Jusbrasil/CNJ ou Receita Federal.</li>
+<li>Automatizar a consulta periódica DataJud para processos ativos.</li>
 <li>Criar migrations com Alembic para versionar o banco.</li>
 <li>Criar telas administrativas mínimas para usuários, leads, clientes e processos.</li>
 <li>Expandir auditoria para clientes, processos, artigos e configurações.</li>
