@@ -524,17 +524,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cobertura-dos-criterios-da-pc2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cobertura dos Critérios da PC2
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#resumo-por-epico" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -777,17 +766,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cobertura-dos-criterios-da-pc2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cobertura dos Critérios da PC2
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#resumo-por-epico" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -873,63 +851,6 @@
 <tr>
 <td>Pendente</td>
 <td>Não há implementação identificada no código atual</td>
-</tr>
-</tbody>
-</table>
-<h2 id="cobertura-dos-criterios-da-pc2">Cobertura dos Critérios da PC2<a class="headerlink" href="#cobertura-dos-criterios-da-pc2" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Critério</th>
-<th>Status</th>
-<th>Evidência atual</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Arquitetura</td>
-<td>Feito</td>
-<td>Backend em monólito modular com camadas <code>router</code>, <code>controller</code>, <code>service</code>, <code>repository</code>, <code>model</code> e <code>schema</code>; documentação em <a href="../../arquitetura/estrutura-inicial/">Estrutura Atual dos Repositórios</a></td>
-</tr>
-<tr>
-<td>Clean Code</td>
-<td>Feito</td>
-<td>Separação de responsabilidades por módulo, exceções de domínio padronizadas, settings centralizado e inicialização de banco protegida para produção</td>
-</tr>
-<tr>
-<td>Teste parametrizado</td>
-<td>Feito</td>
-<td>O backend possui 29 ocorrências de <code>@pytest.mark.parametrize</code>, cobrindo validações de schemas, CNJ, documentos, e-mails, status, limites e datas</td>
-</tr>
-<tr>
-<td>Teste de integração</td>
-<td>Feito</td>
-<td>Suítes em <code>tests/integration/</code> para repositórios e persistência, além de fluxos e2e em <code>tests/e2e/</code></td>
-</tr>
-<tr>
-<td>Coverage</td>
-<td>Feito</td>
-<td>Suíte local validada com <code>pytest-cov</code>, mantendo cobertura acima de 98%</td>
-</tr>
-<tr>
-<td>Banco de dados completo</td>
-<td>Feito</td>
-<td>Models SQLAlchemy, relacionamentos, constraints, índices e migration inicial com Alembic</td>
-</tr>
-<tr>
-<td>Modelo físico do banco</td>
-<td>Feito</td>
-<td>DER Mermaid documentado em <a href="../../arquitetura/modelo-fisico/">Modelo Físico do Banco</a></td>
-</tr>
-<tr>
-<td>Integração com API externa</td>
-<td>Feito</td>
-<td>Integração com API pública DataJud, sincronização individual e em lote, retentativa e logs persistidos</td>
-</tr>
-<tr>
-<td>Lint ou derivados</td>
-<td>Feito</td>
-<td>Ruff configurado para lint, formatação e ordenação de imports; pipeline também prevê Bandit e Pip Audit</td>
 </tr>
 </tbody>
 </table>
