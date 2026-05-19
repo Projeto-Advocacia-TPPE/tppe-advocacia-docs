@@ -80,7 +80,7 @@ Nem todos os módulos precisam de todas as camadas. O módulo `email`, por exemp
 | `clients` | Cadastro, edição, busca e observações de clientes |
 | `processes` | Processos, movimentações, status e anotações internas |
 | `datajud` | Cliente e endpoints de sincronização individual e em lote de movimentações pela API pública DataJud |
-| `external_api_logs` | Registro e consulta administrativa de chamadas a APIs externas |
+| `external_api_logs` | Registro, consulta administrativa e notificação de falhas de chamadas a APIs externas |
 | `email` | Abstração de envio de e-mail via Resend |
 | `health` | Health check da API e do banco |
 

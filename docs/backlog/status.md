@@ -18,7 +18,7 @@ Esta matriz compara o backlog planejado com o estado atual do código. A avalia�
 | Landing Page | Parcial | Backend de conteúdo, mídia e artigos existe; frontend público e painel editorial ainda são iniciais |
 | Gestão de Leads e Clientes | Parcial | Leads, clientes e observações existem; histórico completo e conversão lead-cliente ainda faltam |
 | Core Jurídico | Parcial | Processos, movimentações, status e anotações existem; campos como advogado responsável/comarca ainda não estão completos |
-| APIs Externas | Parcial | Há sincronização individual e em lote com a API pública DataJud, seleção do tribunal por alias salvo no processo, comando agendável para execução periódica, retentativa para falhas temporárias e log persistido de chamadas externas; ainda faltam notificações administrativas |
+| APIs Externas | Parcial | Há sincronização individual e em lote com a API pública DataJud, seleção do tribunal por alias salvo no processo, comando agendável para execução periódica, retentativa para falhas temporárias, log persistido e notificação por e-mail de falhas externas; ainda falta política mais completa de retentativas assíncronas |
 | Notificações | Parcial | Há envio de e-mail para reset/criação de usuário; faltam notificações configuráveis e eventos jurídicos |
 | Backup, LGPD e Compliance | Pendente | Não há anonimização, consentimento registrado, exportação LGPD ou backup automatizado |
 | Agenda e Prazos | Pendente | Não há agenda, compromissos, prazos, feriados ou alertas |
@@ -48,7 +48,7 @@ Esta matriz compara o backlog planejado com o estado atual do código. A avalia�
 | US-18 | Feito | Alteração de status com movimentação `SYSTEM` na mesma transação | Regras de transição mais específicas, se exigidas |
 | US-19 | Feito | Anotações internas de processo com criação, listagem e edição | Melhorar tela de uso |
 | US-20 | Feito | `POST /api/v1/processes/{process_id}/datajud/sync-movements` sincroniza um processo, `POST /api/v1/datajud/sync-active-processes` sincroniza processos ativos em lote usando o tribunal salvo em cada processo e `scripts/sync_datajud_active_processes.py` permite execução periódica por cron/scheduler da infraestrutura | Configurar o agendamento no ambiente de deploy |
-| US-21 | Parcial | Tabela `external_api_logs`, `GET /api/v1/external-api-logs` e retentativa automática para falhas temporárias do DataJud | Notificação ao administrador e política mais completa de retentativas assíncronas |
+| US-21 | Parcial | Tabela `external_api_logs`, `GET /api/v1/external-api-logs`, notificação por e-mail aos admins em falhas externas com throttling e retentativa automática para falhas temporárias do DataJud | Wrapper genérico para todas as integrações, payload sanitizado e política mais completa de retentativas assíncronas |
 | US-22 | Parcial | Resend envia e-mails de reset e boas-vindas | Notificações configuráveis por usuário/evento |
 | US-23 | Pendente | Não identificado | Notificar eventos de processos vinculados |
 | US-24 | Pendente | Não identificado | Anonimização de ex-clientes e regras de retenção |
@@ -63,7 +63,7 @@ Esta matriz compara o backlog planejado com o estado atual do código. A avalia�
 
 1. O backend já possui migration inicial com Alembic e não executa `Base.metadata.create_all` em `APP_ENV=production`; falta incorporar `alembic upgrade head` ao processo automatizado de deploy.
 2. O modelo físico está documentado e versionado em migration inicial; futuras alterações de schema devem manter o DER e as migrations sincronizados.
-3. A integração externa jurídica existe via DataJud, possui seleção de tribunal por processo, retentativa para falhas temporárias e já expõe comando agendável; ainda falta configurar o cron/scheduler no ambiente de deploy.
+3. A integração externa jurídica existe via DataJud, possui seleção de tribunal por processo, retentativa para falhas temporárias, notificação administrativa de falhas e já expõe comando agendável; ainda falta configurar o cron/scheduler no ambiente de deploy.
 4. O frontend não acompanha a amplitude do backend; a maior parte das funcionalidades está disponível apenas via API.
 5. RBAC precisa ser refinado para os papéis reais do backlog.
 
