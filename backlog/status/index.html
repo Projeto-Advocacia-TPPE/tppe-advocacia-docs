@@ -887,7 +887,7 @@
 <tr>
 <td>APIs Externas</td>
 <td>Parcial</td>
-<td>Há sincronização individual e em lote com a API pública DataJud, comando agendável para execução periódica, retentativa para falhas temporárias e log persistido de chamadas externas; ainda faltam notificações administrativas</td>
+<td>Há sincronização individual e em lote com a API pública DataJud, seleção do tribunal por alias salvo no processo, comando agendável para execução periódica, retentativa para falhas temporárias e log persistido de chamadas externas; ainda faltam notificações administrativas</td>
 </tr>
 <tr>
 <td>Notificações</td>
@@ -1015,7 +1015,7 @@
 <tr>
 <td>US-16</td>
 <td>Parcial</td>
-<td>Cadastro de processo com CNJ, vara/court, tipo, parte contrária e cliente</td>
+<td>Cadastro de processo com CNJ, vara/court, alias DataJud do tribunal, tipo, parte contrária e cliente</td>
 <td>Advogado responsável, comarca/área e regras mais completas</td>
 </tr>
 <tr>
@@ -1039,7 +1039,7 @@
 <tr>
 <td>US-20</td>
 <td>Feito</td>
-<td><code>POST /api/v1/processes/{process_id}/datajud/sync-movements</code> sincroniza um processo, <code>POST /api/v1/datajud/sync-active-processes</code> sincroniza processos ativos em lote e <code>scripts/sync_datajud_active_processes.py</code> permite execução periódica por cron/scheduler da infraestrutura</td>
+<td><code>POST /api/v1/processes/{process_id}/datajud/sync-movements</code> sincroniza um processo, <code>POST /api/v1/datajud/sync-active-processes</code> sincroniza processos ativos em lote usando o tribunal salvo em cada processo e <code>scripts/sync_datajud_active_processes.py</code> permite execução periódica por cron/scheduler da infraestrutura</td>
 <td>Configurar o agendamento no ambiente de deploy</td>
 </tr>
 <tr>
@@ -1108,7 +1108,7 @@
 <ol>
 <li>O backend já possui migration inicial com Alembic e não executa <code>Base.metadata.create_all</code> em <code>APP_ENV=production</code>; falta incorporar <code>alembic upgrade head</code> ao processo automatizado de deploy.</li>
 <li>O modelo físico está documentado e versionado em migration inicial; futuras alterações de schema devem manter o DER e as migrations sincronizados.</li>
-<li>A integração externa jurídica existe via DataJud, possui retentativa para falhas temporárias e já expõe comando agendável; ainda falta configurar o cron/scheduler no ambiente de deploy.</li>
+<li>A integração externa jurídica existe via DataJud, possui seleção de tribunal por processo, retentativa para falhas temporárias e já expõe comando agendável; ainda falta configurar o cron/scheduler no ambiente de deploy.</li>
 <li>O frontend não acompanha a amplitude do backend; a maior parte das funcionalidades está disponível apenas via API.</li>
 <li>RBAC precisa ser refinado para os papéis reais do backlog.</li>
 </ol>
