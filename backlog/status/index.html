@@ -887,7 +887,7 @@
 <tr>
 <td>APIs Externas</td>
 <td>Parcial</td>
-<td>Há sincronização individual e em lote com a API pública DataJud, seleção do tribunal por alias salvo no processo, comando agendável para execução periódica, retentativa para falhas temporárias e log persistido de chamadas externas; ainda faltam notificações administrativas</td>
+<td>Há sincronização individual e em lote com a API pública DataJud, seleção do tribunal por alias salvo no processo, comando agendável para execução periódica, retentativa para falhas temporárias, log persistido e notificação por e-mail de falhas externas; ainda falta política mais completa de retentativas assíncronas</td>
 </tr>
 <tr>
 <td>Notificações</td>
@@ -1045,8 +1045,8 @@
 <tr>
 <td>US-21</td>
 <td>Parcial</td>
-<td>Tabela <code>external_api_logs</code>, <code>GET /api/v1/external-api-logs</code> e retentativa automática para falhas temporárias do DataJud</td>
-<td>Notificação ao administrador e política mais completa de retentativas assíncronas</td>
+<td>Tabela <code>external_api_logs</code>, <code>GET /api/v1/external-api-logs</code>, notificação por e-mail aos admins em falhas externas com throttling e retentativa automática para falhas temporárias do DataJud</td>
+<td>Wrapper genérico para todas as integrações, payload sanitizado e política mais completa de retentativas assíncronas</td>
 </tr>
 <tr>
 <td>US-22</td>
@@ -1108,7 +1108,7 @@
 <ol>
 <li>O backend já possui migration inicial com Alembic e não executa <code>Base.metadata.create_all</code> em <code>APP_ENV=production</code>; falta incorporar <code>alembic upgrade head</code> ao processo automatizado de deploy.</li>
 <li>O modelo físico está documentado e versionado em migration inicial; futuras alterações de schema devem manter o DER e as migrations sincronizados.</li>
-<li>A integração externa jurídica existe via DataJud, possui seleção de tribunal por processo, retentativa para falhas temporárias e já expõe comando agendável; ainda falta configurar o cron/scheduler no ambiente de deploy.</li>
+<li>A integração externa jurídica existe via DataJud, possui seleção de tribunal por processo, retentativa para falhas temporárias, notificação administrativa de falhas e já expõe comando agendável; ainda falta configurar o cron/scheduler no ambiente de deploy.</li>
 <li>O frontend não acompanha a amplitude do backend; a maior parte das funcionalidades está disponível apenas via API.</li>
 <li>RBAC precisa ser refinado para os papéis reais do backlog.</li>
 </ol>
