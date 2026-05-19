@@ -887,7 +887,7 @@
 <tr>
 <td>APIs Externas</td>
 <td>Parcial</td>
-<td>Há sincronização individual e em lote com a API pública DataJud, retentativa para falhas temporárias e log persistido de chamadas externas; ainda faltam agendamento periódico e notificações</td>
+<td>Há sincronização individual e em lote com a API pública DataJud, comando agendável para execução periódica, retentativa para falhas temporárias e log persistido de chamadas externas; ainda faltam notificações administrativas</td>
 </tr>
 <tr>
 <td>Notificações</td>
@@ -1038,9 +1038,9 @@
 </tr>
 <tr>
 <td>US-20</td>
-<td>Parcial</td>
-<td><code>POST /api/v1/processes/{process_id}/datajud/sync-movements</code> sincroniza um processo e <code>POST /api/v1/datajud/sync-active-processes</code> sincroniza processos ativos em lote</td>
-<td>Agendar execução periódica automática</td>
+<td>Feito</td>
+<td><code>POST /api/v1/processes/{process_id}/datajud/sync-movements</code> sincroniza um processo, <code>POST /api/v1/datajud/sync-active-processes</code> sincroniza processos ativos em lote e <code>scripts/sync_datajud_active_processes.py</code> permite execução periódica por cron/scheduler da infraestrutura</td>
+<td>Configurar o agendamento no ambiente de deploy</td>
 </tr>
 <tr>
 <td>US-21</td>
@@ -1108,13 +1108,13 @@
 <ol>
 <li>O backend já possui migration inicial com Alembic e não executa <code>Base.metadata.create_all</code> em <code>APP_ENV=production</code>; falta incorporar <code>alembic upgrade head</code> ao processo automatizado de deploy.</li>
 <li>O modelo físico está documentado e versionado em migration inicial; futuras alterações de schema devem manter o DER e as migrations sincronizados.</li>
-<li>A integração externa jurídica existe via DataJud e possui retentativa para falhas temporárias; a sincronização em lote existe, mas ainda depende de acionamento manual.</li>
+<li>A integração externa jurídica existe via DataJud, possui retentativa para falhas temporárias e já expõe comando agendável; ainda falta configurar o cron/scheduler no ambiente de deploy.</li>
 <li>O frontend não acompanha a amplitude do backend; a maior parte das funcionalidades está disponível apenas via API.</li>
 <li>RBAC precisa ser refinado para os papéis reais do backlog.</li>
 </ol>
 <h2 id="proximos-passos-sugeridos">Próximos Passos Sugeridos<a class="headerlink" href="#proximos-passos-sugeridos" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Transformar a sincronização em lote DataJud em execução periódica agendada.</li>
+<li>Configurar cron/scheduler de deploy para executar o comando agendável de sincronização DataJud.</li>
 <li>Automatizar <code>alembic upgrade head</code> no fluxo de deploy.</li>
 <li>Criar telas administrativas mínimas para usuários, leads, clientes e processos.</li>
 <li>Expandir auditoria para clientes, processos, artigos e configurações.</li>
