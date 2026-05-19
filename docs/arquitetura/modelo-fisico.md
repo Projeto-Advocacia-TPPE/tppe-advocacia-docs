@@ -3,7 +3,7 @@
 O modelo físico abaixo representa as tabelas persistidas pelo backend atual. A base usa PostgreSQL em produção/local via Docker Compose e SQLAlchemy como ORM.
 
 !!! info "Observação"
-    O schema passou a ser versionado com Alembic em `alembic/versions`. A migration inicial representa o modelo físico documentado nesta página.
+    O schema é versionado com Alembic em `alembic/versions`. A migration inicial e as migrations incrementais representam o modelo físico documentado nesta página.
 
 ## Diagrama ER
 
@@ -102,6 +102,7 @@ erDiagram
         varchar number UK
         int client_id FK
         varchar court
+        varchar tribunal_alias
         varchar action_type
         varchar opposing_party
         enum status
@@ -280,6 +281,7 @@ erDiagram
 | `number` | varchar(20) | not null, unique, index |
 | `client_id` | integer | FK `clients.id`, nullable, index, on delete restrict |
 | `court` | varchar(120) | not null |
+| `tribunal_alias` | varchar(30) | nullable, index; alias da rota pública DataJud usada na sincronização |
 | `action_type` | varchar(120) | not null |
 | `opposing_party` | varchar(255) | nullable |
 | `status` | enum `ATIVO`/`SUSPENSO`/`ARQUIVADO`/`ENCERRADO` | not null, default `ATIVO` |
@@ -352,6 +354,7 @@ Indice composto: `ix_process_movements_process_occurred(process_id, occurred_at)
 
 - `clients.cpf` e `clients.cnpj` são únicos, mas nullable.
 - `processes.number` guarda o número CNJ normalizado como 20 dígitos.
+- `processes.tribunal_alias` guarda o tribunal usado pela integração DataJud, por exemplo `tjsp`, `tjmg` ou `trf1`.
 - `process_movements` e `process_notes` são apagados em cascata quando o processo é removido.
 - `client_notes` é apagado em cascata quando o cliente é removido.
 - `processes.client_id` usa `ondelete="RESTRICT"`, impedindo remoção direta de cliente vinculado a processo.
