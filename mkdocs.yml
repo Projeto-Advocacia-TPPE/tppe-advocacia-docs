@@ -59,9 +59,9 @@ nav:
   - Backlog:
     - Visão Geral: backlog/index.md
     - Status da Implementação: backlog/status.md
-    - Requisitos: backlog/requisitos.md
+    #- Requisitos: backlog/requisitos.md
   - Arquitetura:
     - Estrutura Atual: arquitetura/estrutura-inicial.md
-    - Modelo Físico do Banco: arquitetura/modelo-fisico.md
+    - Modelo Físico do Banco: arquitetura/modelo-fisicodb.md
   - Protótipo: prototipo.md
 
